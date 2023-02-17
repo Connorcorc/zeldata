@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HYLIAN';
+  src: local('HyliaSerif'),url('../../Assets/HyliaSerif.otf') format('truetype')
+}
+* {
+  font-family: 'HYLIAN'
+}
+
+html {
+  background-color: black;
+  height: 100%;
+}
