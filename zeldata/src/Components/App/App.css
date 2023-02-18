@@ -2,11 +2,11 @@
   font-family: 'HYLIAN';
   src: local('HyliaSerif'),url('../../Assets/HyliaSerif.otf') format('truetype')
 }
-* {
-  font-family: 'HYLIAN'
+@font-face {
+  font-family: 'nesfont';
+  src: local('NES'),url('../../Assets/NES.ttf') format('truetype')
 }
 
-html {
-  background-color: black;
-  height: 100%;
+.App {
+  font-family: 'nesfont'
 }
