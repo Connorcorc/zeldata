@@ -7,6 +7,23 @@ h2 {
   font-family: 'nesfont'
 }
 
+button {
+  width: 20vw;
+}
+.buttonBox {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
 .nesDiv {
   width: 40vw;
+  height: inherit;
+}
+
+.dataContainer {
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
