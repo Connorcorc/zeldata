@@ -1,5 +1,5 @@
 const getData = (data) => {
-  return fetch(`https://zelda.fanapis.com/api/${data}?limit=12`)
+  return fetch(`https://zelda.fanapis.com/api/${data}?limit=10`)
     .then(response => response.json())
 }
 

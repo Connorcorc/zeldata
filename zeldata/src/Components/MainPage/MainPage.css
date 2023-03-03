@@ -3,8 +3,9 @@ h2 {
 }
 
 .mainpageContainer {
-  margin-top: 10vh;
-  font-family: 'nesfont'
+  margin-top: 3vh;
+  font-family: 'nesfont';
+  padding: 20px;
 }
 
 button {
@@ -15,15 +16,19 @@ button {
   justify-content: space-around;
   padding: 30px;
 }
-
+/*
 .nesDiv {
   width: 40vw;
+  padding: 10vw;
   height: inherit;
-}
+} */
 
+.dataDiv {
+  padding: 10px;
+}
 .dataContainer {
   height: inherit;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
