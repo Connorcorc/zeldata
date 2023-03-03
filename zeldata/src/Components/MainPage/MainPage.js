@@ -5,9 +5,6 @@ import audio from '../../Assets/fairy.mp3'
 import getData from '../../apicalls.js'
 import Card from '../Card/Card'
 
-
-
-
 const MainPage = () => {
   const [characterData, setCharacterData] = useState([])
 
@@ -15,6 +12,7 @@ const MainPage = () => {
     console.log(data)
     return (<Card class="nes-container is-rounded" key={data.id} characterData={data} />)
   })
+
   useEffect(async () => {
     await timeout(1500)
     playAudio()
@@ -33,8 +31,6 @@ const MainPage = () => {
     .then(data => setCharacterData(data.data))
   }
 
-  console.log(characterData)
-
   return (
     <main className='mainpageContainer'>
     <div className='nesDiv' class="nes-container with-title is-centered">
@@ -43,19 +39,18 @@ const MainPage = () => {
       <div className='buttonBox'>
         <button class="nes-btn is-primary" onClick={() => fetchData('characters')}>Characters</button>
         <button class="nes-btn is-primary" onClick={() => fetchData('monsters')}>Monsters</button>
+        <button class="nes-btn is-primary" onClick={() => fetchData('places')}>Places</button>
+        <button class="nes-btn is-primary" onClick={() => fetchData('bosses')}>Bosses</button>
       </div>
-      <div class="nes-container with-title is-centered">
+      {characterData.length > 0 && <div className="dataDiv" class="nes-container with-title is-centered">
         <p class="title">Let's see here...</p>
         <div className='dataContainer'>
           {characterData.length > 0 && cardData}
         </div>
-      </div>
+      </div>}
     </div>
     </main>
-
   )
 }
-
-
 
 export default MainPage
